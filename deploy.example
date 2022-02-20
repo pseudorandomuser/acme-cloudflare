@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# $1 => Certificate root directory
+
+# Adjust permissions for certificates
+# Uncomment and adjust KEY_READERS_GROUP as needed
+# Only use if service drops privileges before loading certificates
+#	KEY_READERS_GROUP=keyreaders
+#	chmod 0755 /etc/letsencrypt/{live,archive}
+#	chmod 0640 "$1/privkey.pem"
+#	chgrp $KEY_READERS_GROUP "$1/privkey.pem"
+
+# Certificate deployment steps
+# Perform the necessary steps to deploy your certificates
+# If only used locally and no post-processing is required, consider using symbolic links
+#	RAC_CONNECTION=(-r "rac.example.com" -u "example" -p "secret")
+#	racadm $RAC_CONNECTION config -g cfgRacSecurity -o cfgRacSecCsrKeySize 2048
+#	racadm $RAC_CONNECTION sslkeyupload -t 1 -f "$1/privkey.pem"
+#	racadm $RAC_CONNECTION sslcertupload -t 1 -f "$1/fullchain.pem"
+
+# Restart services if necessary
+#	racadm $RAC_CONNECTION racreset

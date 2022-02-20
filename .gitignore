@@ -1,0 +1,11 @@
+# IDE configurations
+.vscode/
+
+# macOS metadata
+.DS_Store
+._*
+
+# Sensitive data
+config.sh
+deploy.sh
+credentials.ini

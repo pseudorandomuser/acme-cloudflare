@@ -1,0 +1,11 @@
+export DOMAIN="example.com"
+export EMAIL="admin@example.com"
+
+#export HOSTNAME=""
+#export DEPLOY_HOOK=""
+
+#export KEY_TYPE="ecdsa"
+#export KEY_CURVE="secp384r1"
+
+#export KEY_TYPE="rsa"
+#export KEY_SIZE="2048"
