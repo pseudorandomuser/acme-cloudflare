@@ -6,7 +6,7 @@ if [ $(id -u) -ne 0 ]; then
 fi
 
 set -e
-function abort { echo "$1" >&2; exit -1 }
+function abort { echo "$1" >&2; exit -1; }
 
 cd "$(dirname "$0")"
 BASE="$(pwd)"
@@ -19,7 +19,7 @@ DEFAULT_CONFIG="$BASE/config.sh"
 DEFAULT_HOSTNAME="$(hostname)"
 DEFAULT_KEY_TYPE="ecdsa"
 DEFAULT_KEY_SIZE="2048"
-DEFAULT_CURVE="secp384r1"
+DEFAULT_KEY_CURVE="secp384r1"
 DEFAULT_DEPLOY_HOOK="$BASE/deploy.sh"
 
 CONFIG="${1:-$DEFAULT_CONFIG}"
