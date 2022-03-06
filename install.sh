@@ -61,7 +61,7 @@ CERTBOT_ARGUMENTS=(
 	--key-type "$KEY_TYPE"
 	--rsa-key-size "$KEY_SIZE"
 	--elliptic-curve "$KEY_CURVE"
-	--deploy-hook "$DEPLOY_HOOK $CERTROOT"
+	--deploy-hook "\"$DEPLOY_HOOK $CERTROOT\""
 	--dns-cloudflare-credentials "$CREDENTIALS"
 )
 
