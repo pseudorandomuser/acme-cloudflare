@@ -65,10 +65,10 @@ CERTBOT_ARGUMENTS=(
 	--dns-cloudflare-credentials "$CREDENTIALS"
 )
 
-echo "Using the following provided arguments: $CERTBOT_ARGUMENTS"
+echo "Using the following provided arguments: ${CERTBOT_ARGUMENTS[@]}"
 read -p "Please verify, type Y and press Enter to proceed with the above values: " -n 1 -r
 if [[ ! $REPLY =~ ^[Yy]$ ]]; then
     abort "User aborted the operation."
 fi
 
-/usr/bin/certbot certonly --agree-tos --no-eff-email --dns-cloudflare $CERTBOT_ARGUMENTS
+echo ${CERTBOT_ARGUMENTS[@]} | xargs /usr/bin/certbot certonly --agree-tos --no-eff-email --dns-cloudflare
